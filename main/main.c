@@ -28,6 +28,8 @@ void app_main(void)
 	app_display_start(); // 显示驱动启动验证
 
 	while (1) {
-		vTaskDelay(pdMS_TO_TICKS(1000));
+ 		static int count = 0;
+ 		ESP_LOGI("MAIN", "main loop running, count=%d", count++);
+ 		vTaskDelay(pdMS_TO_TICKS(1000));
 	}
 }
