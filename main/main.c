@@ -1,8 +1,10 @@
+
 #include "app_ble.h"
 #include "app_btn.h"
 #include "app_led.h"
 #include "app_sensor.h"
 #include "app_wifi.h"
+#include "app_display.h"
 #include "nvs_flash.h"
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
@@ -23,6 +25,7 @@ void app_main(void)
 	app_led_start();
 	app_sensor_start();
 	app_wifi_start();
+	app_display_start(); // 显示驱动启动验证
 
 	while (1) {
 		vTaskDelay(pdMS_TO_TICKS(1000));

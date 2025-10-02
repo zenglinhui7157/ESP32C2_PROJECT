@@ -6,7 +6,9 @@
 
 #define APP_DISPLAY_INIT_TAG "app_display_init"
 
+
 void app_display_init(void);
 void app_display_fill(uint16_t color);
+void app_display_start(void);
 
 #endif
